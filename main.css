@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: rgb(185, 129, 138);
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+header .container {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 36px;
+    color: white;
+    font-style: 700;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+    font-style: 700;
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.sobre{
+    display: flex;
+    padding: 16px 0;
+    margin-bottom: 16px;
+}
+
+.sobre img {
+    margin-right: 16px;
+    max-width: 100%;
+}
+
+h2 {
+    color: rgb(185, 129, 138);
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+hr {
+    margin-bottom: 16px;
+    border-top: 2px solid rgb(185, 129, 138);
+}
+
+li {
+    list-style: none;
+    padding: 8px 0;
+}
+
+li img {
+    width: 100%; 
+    display: flex;
+}
+
+h3 {
+    color: rgb(185, 129, 138);
+    padding: 8px 0;
+    font-size: 20px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns:repeat(4, 24%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+button {
+    width: 100%;
+    padding: 8px 0;
+    background-color:  rgb(185, 129, 138);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    li img {
+        width: 100%; 
+        display: flex;
+    }
+
+    h2, h3 {
+        font-size: 2em;
+    }
+
+    p, button {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre, .produtos {
+        display: block;
+    }
+
+    header a {
+        display: block;
+        font-size: 1em;
+    }
+
+    h2, h3{
+        font-size: 1.3em;
+    }
+
+    .sobre img {
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+
+    .sobre {
+        margin-bottom: 0;
+    }
+
+}
